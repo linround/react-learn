@@ -1,0 +1,24 @@
+.admin-header{
+    height: 50px;
+    background: #282c34;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin-body {
+    display: flex;
+    height: calc(100% - 50px);
+}
+.admin-body-nav{
+    background: #282c34;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 1px solid black;
+    width: 250px;
+}
+.admin-body-view{
+    flex: 1;
+}

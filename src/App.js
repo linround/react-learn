@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import 'antd/dist/antd.css';
+import Sider from './side/index'
+import './style/main.css'
+import { Outlet } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className="admin-header">头部组件</div>
+        <div className="admin-body">
+            <div className="admin-body-nav">
+                <Sider></Sider>
+            </div>
+            <div className="admin-body-view">
+                <Outlet></Outlet>
+            </div>
+        </div>
     </div>
   );
 }
