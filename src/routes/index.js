@@ -18,6 +18,7 @@ import Hook from '../view/hook/index'
 import UseEffect from '../view/useEffect/index'
 import StateHook from '../view/stateHook/index'
 import Litter from '../view/litter/index'
+import Toast from "../view/toast/index";
 
 let routes = [
     {
@@ -95,6 +96,10 @@ let routes = [
     {
         path: '/Litter',
         element:Litter
+    },
+    {
+        path: '/Toast',
+        element:Toast
     }
 ]
 export default routes

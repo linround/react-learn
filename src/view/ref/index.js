@@ -56,6 +56,42 @@ function App(props) {
             <button  onClick={log}  className="FancyButton">
                 外部访问
             </button>
+            <p>
+                <label htmlFor="age">Age</label>
+                <input type="number" id="age" inputMode="numeric" />
+            </p>
+            <p>
+                <label htmlFor="price">Price</label>
+                <input type="number" id="price" inputMode="decimal" />
+            </p>
+            <p>
+                <label htmlFor="email">Email</label>
+                <input type="email" id="email" />
+            </p>
+            <p>
+                <label htmlFor="number">Number</label>
+                <input type="number" id="number" />
+            </p>
+            <p>
+                <label htmlFor="tel">Tel</label>
+                <input type="tel" id="tel" />
+            </p>
+            <p>
+                <label htmlFor="url">URL</label>
+                <input type="url" id="url" />
+            </p>
+            <p>
+                <label htmlFor="name">Name</label>
+                <input type="text" id="name" autoComplete="name" />
+            </p>
+            <p>
+                <label htmlFor="country">Country</label>
+                <input type="text" id="country" autoComplete="country" />
+            </p>
+            <p>
+                <label htmlFor="email">Email</label>
+                <input type="email" id="email" autoComplete="email" />
+            </p>
             <CustomTextInput>   </CustomTextInput>
         </div>
 

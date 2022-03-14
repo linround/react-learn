@@ -19,6 +19,8 @@ var TickTock = createReactClass({
     },
     componentDidMount: function() {
         this.setInterval(this.tick, 1000); // 调用 mixin 上的方法
+        let name = localStorage.getItem('name')
+        alert(name)
     },
     tick: function() {
         this.setState({seconds: this.state.seconds + 1});
