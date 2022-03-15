@@ -1,0 +1,104 @@
+.switch-container {
+    block-size: 60%;
+    background-color: black;
+    color: white;
+    --thumb-size: 4rem;
+    height: 700px;
+    --track-size: 20rem;
+    --track-padding: 2px;
+
+    --thumb-color: var(--thumb);
+    --thumb-color-highlight: var(--thumb-highlight);
+    --track-color-inactive: var(--track-inactive);
+    --track-color-active: var(--track-active);
+
+
+    --thumb: hsl(0 0% 5%);
+    --thumb-highlight: hsl(0 0% 100% / 25%);
+    --track-inactive: hsl(80 0% 35%);
+    --track-active: hsl(80 60% 60%);
+}
+
+section {
+    display: grid;
+    gap: 2ch;
+}
+
+.gui-switch {
+
+    --isLTR: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 2ch;
+    justify-content: space-between;
+
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
+
+
+
+& > input {
+      --thumb-position: 0%;
+      --thumb-transition-duration: .25s;
+
+      padding: var(--track-padding);
+      background: var(--track-color-inactive);
+      inline-size: var(--track-size);
+      block-size: var(--thumb-size);
+      border-radius: var(--track-size);
+
+      appearance: none;
+      pointer-events: none;
+      touch-action: pan-y;
+      border: none;
+      outline-offset: 5px;
+      box-sizing: content-box;
+
+      flex-shrink: 0;
+      display: grid;
+      align-items: center;
+      grid: [track] 1fr / [track] 1fr;
+
+      transition: background-color .5s ease;
+
+&::before {
+     --highlight-size: 0;
+
+     content: "";
+     cursor: pointer;
+     pointer-events: auto;
+     grid-area: track;
+     inline-size: var(--thumb-size);
+     block-size: var(--thumb-size);
+     background: var(--thumb-color);
+     box-shadow: 0 0 0 var(--highlight-size) var(--thumb-color-highlight);
+     border-radius: 50%;
+     transform: translateX(var(--thumb-position));
+     transition: transform .5s cubic-bezier(0, 0.93, 0.49, 0.98),box-shadow .5s cubic-bezier(0, 0.93, 0.49, 0.98);
+}
+
+&:not(:disabled):hover::before {
+     --highlight-size: .5rem;
+ }
+
+&:checked {
+     background: var(--track-color-active);
+
+     --thumb-position: calc((var(--track-size) - 99%));
+ }
+
+
+&:disabled {
+     cursor: not-allowed;
+     --thumb-color: transparent;
+
+&::before {
+     cursor: not-allowed;
+     box-shadow: inset 0 0 0 2px --thumb-highlight;
+ }
+}
+}
+}

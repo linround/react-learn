@@ -21,11 +21,21 @@ import Litter from '../view/litter/index'
 import Toast from "../view/toast/index";
 import Svg from '../view/svg/index'
 import Menu3D from '../view/menu3D'
+import MultiSelect from '../view/multiSelect/index'
+import Switch from '../view/switch/index'
 
 let routes = [
     {
         path:'/home',
         element: Home
+    },
+    {
+        path:'/Switch',
+        element: Switch
+    },
+    {
+        path:'/MultiSelect',
+        element: MultiSelect
     },
     {
         path:'/Menu3D',
