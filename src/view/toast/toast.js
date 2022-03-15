@@ -18,6 +18,7 @@ const createToast = text => {
 }
 const flipToast = toast => {
     // FIRST
+    debugger
     const first = Toaster.offsetHeight
 
     // add new child to change container size

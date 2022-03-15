@@ -19,11 +19,16 @@ import UseEffect from '../view/useEffect/index'
 import StateHook from '../view/stateHook/index'
 import Litter from '../view/litter/index'
 import Toast from "../view/toast/index";
+import Svg from '../view/svg/index'
 
 let routes = [
     {
         path:'/home',
         element: Home
+    },
+    {
+        path:'/Svg',
+        element: Svg
     },
     {
         path:'/fragment',

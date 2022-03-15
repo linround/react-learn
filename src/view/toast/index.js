@@ -12,6 +12,7 @@ class App extends React.Component{
     render() {
         return (
             <div>
+                自建toast组件
                 <section className="gui-toast-group">
                     <output role="status">Wizard Rose added to cart</output>
                     <output role="status">Self Watering Pot added to cart</output>
