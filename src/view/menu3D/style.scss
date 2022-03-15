@@ -1,0 +1,110 @@
+.threeD-button-set-container{
+  perspective: 40vw;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.threeD-button-set{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5vh;
+
+/*  创建3d上下文*/
+  transform-style: preserve-3d;
+  transform: rotateY(20deg) rotateX(10deg);
+
+  will-change: transform;
+  transition: transform .1s ease;
+  animation: rotate-y 5s ease-in-out infinite;
+}
+@keyframes rotate-y {
+  50% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+}
+
+.threeD-button-set>li{
+  display: inline-flex;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.threeD-button-set button{
+  background-color: black;
+  color: white;
+  text-shadow: 0 1px 1px #282c34;
+  font-size: 32px;
+  border-radius: 5px 20px;
+}
+.threeD-button-set button::after,.threeD-button-set button::before{
+  /* create empty element */
+  content: '';
+  opacity: .8;
+
+  /* cover the parent (button) */
+  position: absolute;
+  inset: 0;
+
+  /* style the element for border accents */
+  border-radius: 5px 20px;
+  transition: transform .1s ease-out;
+}
+/*3d样式变换*/
+.threeD-button-set button {
+  transform: translateZ(100px);
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+.threeD-button-set button::after{
+  transform: translateZ(1px);
+  transition-duration: .5s;
+}
+.threeD-button-set button::before{
+
+  transform: translateZ(-1px);
+  transition-duration: .3s;
+}
+/*对动画 过渡*/
+.threeD-button-set button {
+  will-change: transform;
+  transition: transform 1.2s ease, background-color 1.5s ease,color 5.5s linear;
+}
+/*悬停聚焦*/
+.threeD-button-set button {
+  &:is(:hover, :focus-visible):not(:active) {
+    /* subtle distance plus bg color change on hover/focus */
+    --distance: 15px;
+    color: yellowgreen;
+    transform: translateZ(20px);
+    background-color: #d6aaaa;
+
+    /* if motion is OK, setup transitions and increase distance */
+    --distance: 3vmax;
+
+    transition-timing-function: cubic-bezier(.5, 1.75, .75, 1.25);
+    transition-duration: .4s;
+
+    &::after  {
+      border: 1px solid #191313;
+      transform: translateZ(5px);
+      transition-duration: .5s
+    }
+    &::before {
+      border: 1px solid #191313;
+      transform: translateZ(-5px);
+      transition-duration: .3s
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

@@ -20,11 +20,16 @@ import StateHook from '../view/stateHook/index'
 import Litter from '../view/litter/index'
 import Toast from "../view/toast/index";
 import Svg from '../view/svg/index'
+import Menu3D from '../view/menu3D'
 
 let routes = [
     {
         path:'/home',
         element: Home
+    },
+    {
+        path:'/Menu3D',
+        element: Menu3D
     },
     {
         path:'/Svg',

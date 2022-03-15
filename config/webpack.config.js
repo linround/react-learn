@@ -137,10 +137,17 @@ module.exports = function (webpackEnv) {
                   [
                     'postcss-preset-env',
                     {
-                      autoprefixer: {
-                        flexbox: 'no-2009',
-                      },
                       stage: 3,
+                      features: {
+                        'logical-properties-and-values': false,
+                        'prefers-color-scheme-query': false,
+                        'gap-properties': false,
+                        'custom-properties': false,
+                        'dir-pseudo-class': false,
+                        'focus-within-pseudo-class': false,
+                        'focus-visible-pseudo-class': false,
+                        'color-functional-notation': false,
+                      }
                     },
                   ],
                   // Adds PostCSS Normalize as the reset css with default options,
@@ -154,10 +161,17 @@ module.exports = function (webpackEnv) {
                   [
                     'postcss-preset-env',
                     {
-                      autoprefixer: {
-                        flexbox: 'no-2009',
-                      },
                       stage: 3,
+                      features: {
+                        'logical-properties-and-values': false,
+                        'prefers-color-scheme-query': false,
+                        'gap-properties': false,
+                        'custom-properties': false,
+                        'dir-pseudo-class': false,
+                        'focus-within-pseudo-class': false,
+                        'focus-visible-pseudo-class': false,
+                        'color-functional-notation': false,
+                      }
                     },
                   ],
                 ],
