@@ -25,11 +25,16 @@ import MultiSelect from '../view/multiSelect/index'
 import Switch from '../view/switch/index'
 import ColorSchemes from '../view/colorSchemes/index'
 import MediaScroll from '../view/mediaScroll/index'
+import SpitText from '../view/splitText/index'
 
 let routes = [
     {
         path:'/home',
         element: Home
+    },
+    {
+        path:'/SpitText',
+        element: SpitText
     },
     {
         path:'/MediaScroll',
