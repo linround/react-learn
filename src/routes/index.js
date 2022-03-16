@@ -23,11 +23,21 @@ import Svg from '../view/svg/index'
 import Menu3D from '../view/menu3D'
 import MultiSelect from '../view/multiSelect/index'
 import Switch from '../view/switch/index'
+import ColorSchemes from '../view/colorSchemes/index'
+import MediaScroll from '../view/mediaScroll/index'
 
 let routes = [
     {
         path:'/home',
         element: Home
+    },
+    {
+        path:'/MediaScroll',
+        element: MediaScroll
+    },
+    {
+        path:'/ColorSchemes',
+        element: ColorSchemes
     },
     {
         path:'/Switch',

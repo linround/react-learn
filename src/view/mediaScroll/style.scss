@@ -1,0 +1,17 @@
+.scroller {
+  height: 300px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  border: 1px solid black;
+}
+
+.scroller section {
+  scroll-snap-align: start;
+  height: 200px;
+}
+.scroller .end-scroll-snap-align {
+  scroll-snap-align: end;
+}
+.mediaScroll-container{
+
+}

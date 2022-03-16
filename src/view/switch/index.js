@@ -1,10 +1,14 @@
 import './style.scss'
 function App(){
+    let docLink = 'https://web.dev/shows/gui-challenges/_KqccADghcA/'
     return(
         <div className={'switch-container'}>
             解析说明：
             1.定义一个伪元素before，默认移动0，
             2.定义一个css变量，通过check的状态去改变这个变量值；从而实现左右移动；
+            <div>
+                <a href={docLink} target={'_blank'}>文档链接</a>
+            </div>
             <main>
                 <section>
                     <h2>States</h2>
