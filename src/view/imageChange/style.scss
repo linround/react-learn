@@ -1,0 +1,35 @@
+.image-change-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: auto;
+  .stories {
+    height: 530px;
+    width: 300px;
+    .user {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      .story {
+        grid-area: story;
+        user-select: none;
+        touch-action: manipulation;
+
+        transition: opacity .3s cubic-bezier(0.4, 0.0, 1, 1);
+
+        &.seen {
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}

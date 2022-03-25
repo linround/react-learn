@@ -26,11 +26,16 @@ import Switch from '../view/switch/index'
 import ColorSchemes from '../view/colorSchemes/index'
 import MediaScroll from '../view/mediaScroll/index'
 import SpitText from '../view/splitText/index'
+import ImageChange from '../view/imageChange/index'
 
 let routes = [
     {
         path:'/home',
         element: Home
+    },
+    {
+        path:'/ImageChange',
+        element: ImageChange
     },
     {
         path:'/SpitText',
