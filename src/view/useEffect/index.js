@@ -12,7 +12,7 @@ function Example() {
         //     name:'change',
         //     age: info.age
         // })
-    },[])
+    },[info])
     // 相当于 componentDidMount 和 componentDidUpdate:
     useEffect(() => {
         console.log('=========count',count)

@@ -6,7 +6,6 @@ function Example() {
     console.log(useState(10000))
     const [count, setCount] = useState(0);
     const [num,setNum] = useState(10000)
-    let change = 1000000000
     function changeCount(){
         setCount(count + 1)
     }
@@ -15,7 +14,7 @@ function Example() {
     }
     return (
         <div>
-            <p onClick={()=> changeNum()}>{change}You clicked {num} times</p>
+            <button onClick={()=> changeNum()}>{count}You clicked {num} times</button>
             <button onClick={() => changeCount()}>
                 Click me
             </button>

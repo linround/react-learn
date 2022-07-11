@@ -18,7 +18,6 @@ const createToast = text => {
 }
 const flipToast = toast => {
     // FIRST
-    debugger
     const first = Toaster.offsetHeight
 
     // add new child to change container size
@@ -31,12 +30,12 @@ const flipToast = toast => {
     const invert = last - first
 
     // PLAY
-    const animation = Toaster.animate([
-      { transform: `translateY(${invert}px)` },
-      { transform: 'translateY(0)' }
+    Toaster.animate([
+        { transform: `translateY(${invert}px)` },
+        { transform: 'translateY(0)' }
     ], {
-      duration: 5000,
-      easing: 'ease-out',
+        duration: 5000,
+        easing: 'ease-out',
     })
     console.log(Toaster)
 }

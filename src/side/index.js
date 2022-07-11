@@ -1,29 +1,53 @@
 import { Menu } from 'antd';
 import React from 'react';
-import routes from "../routes/index";
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+import {base, CodePrograms, Programs} from "../routes/index";
+import { MailOutlined } from '@ant-design/icons';
 import { Link } from "react-router-dom";
-const { SubMenu } = Menu;
 
-class Sider extends React.Component {
-    render() {
-        return (
-            <Menu
-                onClick={this.handleClick}
-                style={{width: 256}}
-                defaultSelectedKeys={['1']}
-                defaultOpenKeys={['sub1']}
-                mode="inline"
-            >
-                <SubMenu key="sub1" icon={<MailOutlined/>} title="React学习">
-                    <Menu.ItemGroup key="g1" title="路由">
-                        {routes.map((item,index)=>{
-                           return <Menu.Item key={index}><Link to={item.path}>{item.path}</Link></Menu.Item>
-                        })}
-                    </Menu.ItemGroup>
-                </SubMenu>
-            </Menu>
-        );
-    }
+
+class Index extends React.Component {
+  render() {
+    return (
+      <Menu
+        style={{width: 256}}
+        defaultSelectedKeys={['1']}
+        defaultOpenKeys={['sub1']}
+        inlineCollapsed={false}
+        mode="inline"
+        theme={'dark'}
+      >
+        <Menu.SubMenu key="sub1" icon={<MailOutlined/>} title="React基础">
+          {
+            base.map((item,index)=>{
+              return (
+                <Menu.Item key={index}>
+                  <Link to={item.path}>{item.title}</Link>
+                </Menu.Item>
+              )
+            })}
+        </Menu.SubMenu>
+        <Menu.SubMenu key="sub2" icon={<MailOutlined/>} title="代码方案">
+          {
+            CodePrograms.map((item,index)=>{
+              return (
+                <Menu.Item key={`${index}-2`}>
+                  <Link to={item.path}>{item.title}</Link>
+                </Menu.Item>
+              )
+            })}
+        </Menu.SubMenu>
+        <Menu.SubMenu key="sub3" icon={<MailOutlined/>} title="项目方案">
+          {
+            Programs.map((item,index)=>{
+              return (
+                <Menu.Item key={`${index}-3`}>
+                  <Link to={item.path}>{item.title}</Link>
+                </Menu.Item>
+              )
+            })}
+        </Menu.SubMenu>
+      </Menu>
+    );
+  }
 }
-export default Sider
+export default Index

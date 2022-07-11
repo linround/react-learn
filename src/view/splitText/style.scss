@@ -25,23 +25,15 @@
 }
 
 .splitText-container{
-  height: 100%;
-  width: 100%;
-  overflow: hidden auto;
   scroll-snap-type: y;
   background-color: black;
+  display: flex;
+  flex-direction: column;
   section {
     scroll-snap-align: center;
   }
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 15vh 2vh;
 
   section {
-    block-size: 70vh;
-    display: inline-flex;
     align-items: center;
     justify-content: center;
   }
@@ -107,7 +99,7 @@
   [word-animation="trampoline"] {
     & > span {
       display: inline-block;
-      transform: translateY(100%);
+      transform: translateY(10%);
       animation:
               trampoline 3s ease
               calc(var(--index) * 150 * 1ms)
@@ -120,7 +112,6 @@
 .splitText-desc{
   color: white;
   font-size: 16px;
-  margin-bottom: 100px;
   & h1{
     color: yellowgreen;
   }

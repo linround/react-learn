@@ -3,21 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import routes from "./routes";
+import { Programs, CodePrograms, base } from "./routes";
+
 
 ReactDOM.render(
-    <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<App />}>
-                {routes.map(item=>{
-                    let Element = item.element
-                    return(
-                        <Route key={item.path} path={item.path} element={<Element />} />
-                    )
-                })}
-            </Route>
-        </Routes>
-    </BrowserRouter>,
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />}>
+        {[...Programs,...CodePrograms, ...base].map(item=>{
+          let Element = item.element
+          return(
+            <Route key={item.path} path={item.path} element={<Element />} />
+          )
+        })}
+      </Route>
+    </Routes>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

@@ -28,118 +28,150 @@ import MediaScroll from '../view/mediaScroll/index'
 import SpitText from '../view/splitText/index'
 import ImageChange from '../view/imageChange/index'
 
-let routes = [
-    {
-        path:'/home',
-        element: Home
-    },
-    {
-        path:'/ImageChange',
-        element: ImageChange
-    },
-    {
-        path:'/SpitText',
-        element: SpitText
-    },
-    {
-        path:'/MediaScroll',
-        element: MediaScroll
-    },
-    {
-        path:'/ColorSchemes',
-        element: ColorSchemes
-    },
-    {
-        path:'/Switch',
-        element: Switch
-    },
-    {
-        path:'/MultiSelect',
-        element: MultiSelect
-    },
-    {
-        path:'/Menu3D',
-        element: Menu3D
-    },
-    {
-        path:'/Svg',
-        element: Svg
-    },
-    {
-        path:'/fragment',
-        element: MyFragment
-    },
-    {
-        path:'/lazy',
-        element: Lazy
-    },
-    {
-        path:'/context',
-        element: Context
-    },
-    {
-        path:'/errorBoundary',
-        element: ErrorBoundary
-    },
-    {
-        path:'/ref',
-        element: Ref
-    },
-    {
-        path:'/hocks',
-        element: Hocks
-    },
-    {
-        path:'/thirdLibrary',
-        element: ThirdLibrary
-    },
-    {
-        path:'/thirdLibrary2',
-        element: ThirdLibrary2
-    },
-    {
-        path:'/jsx',
-        element: Jsx
-    },
-    {
-        path: '/shouldComponentUpdate',
-        element: ShouldComponentUpdate
-    },
-    {
-        path: '/noES6',
-        element: NoES6
-    },
-    {
-        path: '/mixin',
-        element: Mixin
-    },
-    {
-        path: '/renderAndProp',
-        element: RenderAndProp
-    },
-    {
-        path:'/memo',
-        element: Memo
-    },
-    {
-        path: '/hook',
-        element: Hook
-    },
-    {
-        path: '/useEffect',
-        element: UseEffect
-    },
-    {
-        path: '/StateHook',
-        element:StateHook
-    },
-    {
-        path: '/Litter',
-        element:Litter
-    },
-    {
-        path: '/Toast',
-        element:Toast
-    }
+export const Programs = [
+  {
+    path:'/home',
+    element: Home,
+    title: '居中布局方案demo'
+  },
+  {
+    path:'/ImageChange', element: ImageChange,
+    title:'渐进切换图像demo'
+  },
+  {
+    path:'/SpitText',
+    element: SpitText,
+    title: '动画方案demo'
+  },
+  {
+    path:'/MediaScroll',
+    element: MediaScroll,
+    title: '滚动捕捉demo'
+  },
+  {
+    path:'/ColorSchemes',
+    element: ColorSchemes,
+    title: '换肤方案demo'
+  },
+  {
+    path:'/Switch',
+    element: Switch,
+    title:'自定义选着按钮demo'
+  },
+  {
+    path:'/Menu3D',
+    element: Menu3D,
+    title: '3D菜单按钮'
+  },
+  {
+    path:'/Svg',
+    element: Svg,
+    title: '.ico电脑主题色适配demo'
+  },
+  {
+    path: '/Toast',
+    element:Toast,
+    title: '自定义Toast'
+  }
 ]
-export default routes
+
+export const CodePrograms = [
+  {
+    path:'/lazy',
+    element: Lazy,
+    title: '资源懒加载'
+  },
+  {
+    path:'/fragment',
+    element: MyFragment,
+    title: 'Fragment标签'
+  }
+]
+
+export const base = [
+  {
+    path:'/MultiSelect',
+    element: MultiSelect,
+    title: '多选demo'
+  },
+  {
+    path:'/context',
+    element: Context,
+    title: '组件通信Context'
+  },
+  {
+    path:'/errorBoundary',
+    element: ErrorBoundary,
+    title: '错误捕获'
+  },
+  {
+    path:'/ref',
+    element: Ref,
+    title: 'Ref'
+  },
+  {
+    path:'/hocks',
+    element: Hocks,
+    title: '生命周期钩子'
+  },
+  {
+    path:'/thirdLibrary',
+    element: ThirdLibrary,
+    title: 'backbone第三方库'
+  },
+  {
+    path:'/thirdLibrary2',
+    element: ThirdLibrary2,
+    title: 'backbone第三方库'
+  },
+  {
+    path:'/jsx',
+    element: Jsx,
+    title: 'Jsx'
+  },
+  {
+    path: '/shouldComponentUpdate',
+    element: ShouldComponentUpdate,
+    title: '组件更新的优化'
+  },
+  {
+    path: '/noES6',
+    element: NoES6,
+    title: 'NoES6'
+  },
+  {
+    path: '/mixin',
+    element: Mixin,
+    title: 'Mixin'
+  },
+  {
+    path: '/renderAndProp',
+    element: RenderAndProp,
+    title: '组件解耦方案'
+  },
+  {
+    path:'/memo',
+    element: Memo,
+    title: 'Memo的使用'
+  },
+  {
+    path: '/hook',
+    element: Hook,
+    title: '状态管理'
+  },
+  {
+    path: '/useEffect',
+    element: UseEffect,
+    title: '自动更新useEffect'
+  },
+  {
+    path: '/StateHook',
+    element:StateHook,
+    title: '自动更新useEffect'
+  },
+  {
+    path: '/Litter',
+    element:Litter,
+    title: '列表渲染'
+  }
+]

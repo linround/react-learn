@@ -14,7 +14,8 @@ class MyComponent extends React.Component{
         console.log(this.refr,'---------------ref')
         this.forceUpdate()
         this.setState({
-            name:'change'
+            name:'change',
+            color: 'red'
         },()=>{
             console.log('=====================')
         })
@@ -24,9 +25,6 @@ class MyComponent extends React.Component{
         console.log(this,'======this')
         const divStyle = {
             color: 'blue',
-            backgroundImage: 'url(' + '' + ')',
-            WebkitTransition: 'all', // note the capital 'W' here
-            // MsTransition: 'all' // 'ms' is the only lowercase vendor prefix
         };
         return (
             <div style={divStyle} ref={this.refr} onClick={this.change}>Memo--{this.state.name}--{this.state.color}--{this.state.age}</div>

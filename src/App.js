@@ -1,19 +1,20 @@
-import 'antd/dist/antd.css';
-import Sider from './side/index'
-import './style/main.css'
+import styles from './style/main.less'
 import { Outlet } from "react-router-dom";
+import Side from './side/index'
+import { Header } from './components/header'
+import 'antd/dist/antd.min.css';
 function App() {
   return (
-    <div className="App">
-        <div className="admin-header">头部组件</div>
-        <div className="admin-body">
-            <div className="admin-body-nav">
-                <Sider></Sider>
-            </div>
-            <div className="admin-body-view">
-                <Outlet></Outlet>
-            </div>
+    <div className={styles.container}>
+      <div className={styles.left}>
+        <Side></Side>
+      </div>
+      <div className={styles.right}>
+        <Header></Header>
+        <div className={styles.view}>
+          <Outlet></Outlet>
         </div>
+      </div>
     </div>
   );
 }

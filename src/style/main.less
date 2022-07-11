@@ -1,0 +1,21 @@
+@left-header-height: 50px;
+@left-body-height: calc( 100vh - 50px );
+@dark-background: #001529;
+@dark-font-color: #ffffff;
+
+.container {
+  display: flex;
+  background: @dark-background;
+}
+.left {
+  height: 100vh;
+  overflow: auto;
+}
+.right {
+  flex: 5;
+}
+.view {
+  height: @left-body-height;
+  overflow: hidden;
+  background: @dark-background;
+}
