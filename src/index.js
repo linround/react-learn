@@ -9,14 +9,13 @@ import { Programs, CodePrograms, base } from "./routes";
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />}>
-        {[...Programs,...CodePrograms, ...base].map(item=>{
-          let Element = item.element
-          return(
-            <Route key={item.path} path={item.path} element={<Element />} />
-          )
-        })}
-      </Route>
+      {[...Programs,...CodePrograms, ...base].map(item=>{
+        let Element = item.element
+        return(
+          <Route key={item.path} path={item.path} element={<Element />} />
+        )
+      })}
+      <Route path="/" element={<App />}></Route>
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')

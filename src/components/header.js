@@ -2,7 +2,7 @@ import styles from './header.less'
 import { MenuFoldOutlined } from '@ant-design/icons'
 import { Button, Popover } from "antd";
 
-export function Header(){
+export function HeaderComponent(){
   function handleViewPersonInfo(){
   
   }

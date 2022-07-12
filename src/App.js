@@ -1,21 +1,26 @@
-import styles from './style/main.less'
+import React from "react";
 import { Outlet } from "react-router-dom";
-import Side from './side/index'
-import { Header } from './components/header'
 import 'antd/dist/antd.min.css';
+import {Layout} from "antd";
+import Side from './side/index'
+import { HeaderComponent } from './components/header'
+const {Sider,Footer,Content,Header  } = Layout
 function App() {
   return (
-    <div className={styles.container}>
-      <div className={styles.left}>
+    <Layout>
+      <Sider>
         <Side></Side>
-      </div>
-      <div className={styles.right}>
-        <Header></Header>
-        <div className={styles.view}>
+      </Sider>
+      <Layout>
+        <Header>
+          <HeaderComponent></HeaderComponent>
+        </Header>
+        <Content>
           <Outlet></Outlet>
-        </div>
-      </div>
-    </div>
+        </Content>
+        <Footer></Footer>
+      </Layout>
+    </Layout>
   );
 }
 
